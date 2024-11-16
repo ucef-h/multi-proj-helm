@@ -1,0 +1,45 @@
+# Ignore Visual Studio temporary files, build results, and
+# personal settings.
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific folders
+.vscode/
+.idea/
+.vs/
+_ReSharper.Caches/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.cache/
+*.ilk
+*.idb
+*.pdb
+*.ipdb
+*.tlog
+*.log
+*.vspscc
+*.vssscc
+
+## OS-generated files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+*.stackdump
+
+# Docker files and containers
+*.dockerignore
+docker-compose.override.yml
