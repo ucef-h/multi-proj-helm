@@ -1,0 +1,45 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - master # Trigger on pushes to the master branch
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    env:
+      # Docker Hub credentials from repository secrets
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Log in to Docker Hub
+      - name: Log in to Docker Hub
+        run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+      # Step 3: Build and push UserService
+      - name: Build and Push UserService
+        run: |
+          docker build -t $DOCKER_USERNAME/userservice ./UserService
+          docker tag $DOCKER_USERNAME/userservice:latest $DOCKER_USERNAME/userservice:latest
+          docker push $DOCKER_USERNAME/userservice:latest
+
+      # Step 4: Build and push AccountService
+      - name: Build and Push AccountService
+        run: |
+          docker build -t $DOCKER_USERNAME/accountservice ./AccountService
+          docker tag $DOCKER_USERNAME/accountservice:latest $DOCKER_USERNAME/accountservice:latest
+          docker push $DOCKER_USERNAME/accountservice:latest
+
+      # Step 5: Build and push OrderService
+      - name: Build and Push OrderService
+        run: |
+          docker build -t $DOCKER_USERNAME/orderservice ./OrderService
+          docker tag $DOCKER_USERNAME/orderservice:latest $DOCKER_USERNAME/orderservice:latest
+          docker push $DOCKER_USERNAME/orderservice:latest
