@@ -15,13 +15,6 @@ jobs:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-    strategy:
-      matrix:
-        service:
-          - UserService
-          - AccountService
-          - OrderService
-
     steps:
       # Step 1: Checkout the code
       - name: Checkout repository
@@ -31,8 +24,20 @@ jobs:
       - name: Log in to Docker Hub
         run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
 
-      # Step 3: Build and Push Images
-      - name: Build and Push Docker Image for ${{ matrix.service }}
+      # Step 3: Build and Push UserService
+      - name: Build and Push UserService
         run: |
-          docker build -t $DOCKER_USERNAME/${{ matrix.service | toLowerCase }} -f ${{ matrix.service }}/Dockerfile .
-          docker push $DOCKER_USERNAME/${{ matrix.service | toLowerCase }}
+          docker build -t $DOCKER_USERNAME/userservice -f UserService/Dockerfile .
+          docker push $DOCKER_USERNAME/userservice
+
+      # Step 4: Build and Push AccountService
+      - name: Build and Push AccountService
+        run: |
+          docker build -t $DOCKER_USERNAME/accountservice -f AccountService/Dockerfile .
+          docker push $DOCKER_USERNAME/accountservice
+
+      # Step 5: Build and Push OrderService
+      - name: Build and Push OrderService
+        run: |
+          docker build -t $DOCKER_USERNAME/orderservice -f OrderService/Dockerfile .
+          docker push $DOCKER_USERNAME/orderservice
