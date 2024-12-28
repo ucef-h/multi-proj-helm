@@ -1,0 +1,22 @@
+apiVersion: v2
+name: umbrella-chart
+description: An umbrella chart for managing microservices
+version: 0.1.0
+appVersion: "1.0.0"
+
+dependencies:
+  - name: userservice
+    version: 0.1.0
+    repository: file://../UserService/helm
+  - name: accountservice
+    version: 0.1.0
+    repository: file://../AccountService/helm
+  - name: orderservice
+    version: 0.1.0
+    repository: file://../OrderService/helm
+  - name: mongodb
+    version: 13.11.1    
+    repository: https://charts.bitnami.com/bitnami
+  - name: redis
+    version: 17.3.4
+    repository: https://charts.bitnami.com/bitnami

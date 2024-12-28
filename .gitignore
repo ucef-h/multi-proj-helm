@@ -43,3 +43,13 @@ ehthumbs.db
 # Docker files and containers
 *.dockerignore
 docker-compose.override.yml
+
+# Ignore Helm chart dependencies and packages
+/charts/
+/*.tgz
+
+# Ignore Helm-generated YAML manifests from `helm template`
+/templates/*.yaml
+
+# Ignore temporary values.yaml backups (if created during testing)
+/*.bak

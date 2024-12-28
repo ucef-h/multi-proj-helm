@@ -1,0 +1,12 @@
+dependencies:
+- name: userservice
+  repository: file://../UserService/helm
+  version: 0.1.0
+- name: accountservice
+  repository: file://../AccountService/helm
+  version: 0.1.0
+- name: orderservice
+  repository: file://../OrderService/helm
+  version: 0.1.0
+digest: sha256:1f1826a963d6590e61ad98931a86f4adf04bf112ac9c29231038fc73470c78b8
+generated: "2024-11-17T16:32:59.3678673+01:00"

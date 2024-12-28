@@ -1,0 +1,22 @@
+global:
+  namespace: default
+
+mongodb:
+  auth:
+    enabled: true
+    rootPassword: "rootpassword"
+    username: "appuser"
+    password: "apppassword"
+    database: "appdb"
+  architecture: standalone  
+  service:
+    type: ClusterIP
+    port: 27017
+
+redis:
+  auth:
+    enabled: false          
+  architecture: standalone
+  service:
+    type: ClusterIP
+    port: 6379
