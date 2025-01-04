@@ -31,8 +31,8 @@ jobs:
         
       - name: Build Chart Dependencies
         run: |
-          helm dependency update umbrella-charts
-          helm dependency build umbrella-charts
+          helm dependency update ./charts/Umbrella-charts
+          helm dependency build ./charts/Umbrella-charts
           
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
