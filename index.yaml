@@ -2,6 +2,31 @@ apiVersion: v1
 entries:
   umbrella-chart:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-01-04T16:25:49.766830126Z"
+    dependencies:
+    - name: userservice
+      repository: file://../../UserService/helm
+      version: 0.1.1
+    - name: accountservice
+      repository: file://../../AccountService/helm
+      version: 0.1.1
+    - name: orderservice
+      repository: file://../../OrderService/helm
+      version: 0.1.1
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.4.0
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.6.1
+    description: An umbrella chart for managing microservices
+    digest: 878eec312014222a606089c2a4094520a2d05d604305a3ebae30b266dba05077
+    name: umbrella-chart
+    urls:
+    - https://github.com/ucef-h/multi-proj-helm/releases/download/umbrella-chart-0.1.1/umbrella-chart-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-01-04T15:59:26.629865044Z"
     dependencies:
@@ -26,4 +51,4 @@ entries:
     urls:
     - https://github.com/ucef-h/multi-proj-helm/releases/download/umbrella-chart-0.1.0/umbrella-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-04T15:59:26.629875804Z"
+generated: "2025-01-04T16:25:49.766840886Z"
