@@ -1,3 +1,6 @@
+## Helm Location
+https://ucef-h.github.io/multi-proj-helm/index.yaml
+
 ### **Helm Basics**
 1. **`helm create <chart-name>`**  
    Create a new Helm chart with a starter template.
