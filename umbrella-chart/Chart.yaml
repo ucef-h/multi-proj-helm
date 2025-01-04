@@ -15,8 +15,8 @@ dependencies:
     version: 0.1.0
     repository: file://../OrderService/helm
   - name: mongodb
-    version: 13.11.1    
+    version: 16.4.0   
     repository: https://charts.bitnami.com/bitnami
   - name: redis
-    version: 17.3.4
+    version: 20.6.1
     repository: https://charts.bitnami.com/bitnami
