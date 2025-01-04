@@ -15,16 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "umbrella-chart", "umbrella-chart", "{52C09BF6-7827-4E8E-A48D-6FF8F8313F10}"
-	ProjectSection(SolutionItems) = preProject
-		umbrella-chart\.helmignore = umbrella-chart\.helmignore
-		umbrella-chart\Chart.yaml = umbrella-chart\Chart.yaml
-		umbrella-chart\values.yaml = umbrella-chart\values.yaml
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "charts", "charts", "{52C09BF6-7827-4E8E-A48D-6FF8F8313F10}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{116F16BE-D554-4C69-AD75-B0C9D82F045F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "charts", "charts", "{DEFA319E-D42C-4919-BCB6-BD91BAD30ADE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "umbrella-charts", "umbrella-charts", "{538EAEB6-C644-4728-94E9-F2DBFC0E7535}"
+	ProjectSection(SolutionItems) = preProject
+		charts\umbrella-charts\.helmignore = charts\umbrella-charts\.helmignore
+		charts\umbrella-charts\Chart.lock = charts\umbrella-charts\Chart.lock
+		charts\umbrella-charts\Chart.yaml = charts\umbrella-charts\Chart.yaml
+		charts\umbrella-charts\values.yaml = charts\umbrella-charts\values.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,8 +52,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{116F16BE-D554-4C69-AD75-B0C9D82F045F} = {52C09BF6-7827-4E8E-A48D-6FF8F8313F10}
-		{DEFA319E-D42C-4919-BCB6-BD91BAD30ADE} = {52C09BF6-7827-4E8E-A48D-6FF8F8313F10}
+		{116F16BE-D554-4C69-AD75-B0C9D82F045F} = {538EAEB6-C644-4728-94E9-F2DBFC0E7535}
+		{DEFA319E-D42C-4919-BCB6-BD91BAD30ADE} = {538EAEB6-C644-4728-94E9-F2DBFC0E7535}
+		{538EAEB6-C644-4728-94E9-F2DBFC0E7535} = {52C09BF6-7827-4E8E-A48D-6FF8F8313F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C44C1F5-D495-45B9-88B6-B66314C11D63}

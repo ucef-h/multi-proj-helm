@@ -7,13 +7,13 @@ appVersion: "1.0.0"
 dependencies:
   - name: userservice
     version: 0.1.0
-    repository: file://../UserService/helm
+    repository: file://../../UserService/helm
   - name: accountservice
     version: 0.1.0
-    repository: file://../AccountService/helm
+    repository: file://../../AccountService/helm
   - name: orderservice
     version: 0.1.0
-    repository: file://../OrderService/helm
+    repository: file://../../OrderService/helm
   - name: mongodb
     version: 16.4.0   
     repository: https://charts.bitnami.com/bitnami
