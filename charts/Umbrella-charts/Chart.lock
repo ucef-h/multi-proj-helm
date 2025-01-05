@@ -1,18 +1,18 @@
 dependencies:
 - name: userservice
   repository: file://../../UserService/helm
-  version: 0.1.0
+  version: 0.1.1
 - name: accountservice
   repository: file://../../AccountService/helm
-  version: 0.1.0
+  version: 0.1.1
 - name: orderservice
   repository: file://../../OrderService/helm
-  version: 0.1.0
+  version: 0.1.1
 - name: mongodb
   repository: https://charts.bitnami.com/bitnami
   version: 16.4.0
 - name: redis
   repository: https://charts.bitnami.com/bitnami
   version: 20.6.1
-digest: sha256:fed9d57fd599cfbd289476192a8db25ae8291885b44be7e82c61f767c28c0186
-generated: "2025-01-04T15:43:06.0285078+01:00"
+digest: sha256:75888206c26da4cba778a5fd2b85926df4a897f29f58e2c547bea8edb7ce7881
+generated: "2025-01-05T12:36:52.9133534+01:00"
